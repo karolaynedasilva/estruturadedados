@@ -1,5 +1,7 @@
 package estruturas;
 
+import java.util.Arrays;
+
 public class Vetor {
 
     public Integer[] elementos;
@@ -86,15 +88,20 @@ public class Vetor {
         System.out.println("Item não encontrado");
     }
 
-    // Exercicio 1 - busca binária
     public int buscaBinaria(int valor) {
+        System.out.println("Array atual: " + Arrays.toString(this.elementos));
+
         int inicio = 0;
         int fim = this.tamanho - 1;
 
         while (inicio <= fim) {
             int meio = (inicio + fim) / 2;
 
+            // Exibir os valores da iteração atual
+            System.out.println("Buscando: " + valor + " | Início: " + inicio + ", Fim: " + fim + ", Meio: " + meio
+                    + ", Valor no meio: " + this.elementos[meio]);
             if (this.elementos[meio] == valor) {
+                System.out.println("Valor encontrado na posição: " + meio);
                 return meio; // Encontrou
             } else if (this.elementos[meio] < valor) {
                 inicio = meio + 1;
@@ -103,6 +110,7 @@ public class Vetor {
             }
         }
 
+        System.out.println("Valor não encontrado.");
         return -1; // Não encontrado
     }
 
