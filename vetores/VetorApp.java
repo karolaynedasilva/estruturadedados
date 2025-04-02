@@ -5,46 +5,53 @@ public class VetorApp {
 
     public static void main(String[] args) {
 
-        // Criando um vetor
-        Vetor lista = new Vetor(10);
+        Vetor vetor = new Vetor(10);
+        Lista listaduplamenteencadeada = new Lista();
 
         // Adicionando elementos ao vetor
         int[] valores = { 2, 7, 9, 12, 16, 21, 27, 33, 42, 54 };
         for (int valor : valores) {
-            lista.adicionar(valor);
+            vetor.adicionar(valor);
         }
 
         // Exibindo os elementos da lista
         System.out.println("Lista inicial:");
-        lista.mostrarElementos();
+        vetor.mostrarElementos();
 
         // Testando a busca binária
+        System.out.println("-----");
         System.out.println("Buscando o valor 21:");
-        lista.buscaBinaria(21);
+        vetor.buscaBinaria(21);
 
+        System.out.println("-----");
         System.out.println("Buscando o valor 27:");
-        lista.buscaBinaria(27);
+        vetor.buscaBinaria(27);
 
         // Testando a inserção no início da lista
+        System.out.println("-----");
         System.out.println("Inserindo o valor 1 no início da lista:");
-        lista.inserirValorNoInicio(1);
-        lista.mostrarElementos();
+        vetor.inserirValorNoInicio(1);
+        vetor.mostrarElementos();
 
-        // Lista lista = new Lista();
+        listaduplamenteencadeada.adicionarAoInicio(9);
+        listaduplamenteencadeada.adicionarAoFim(10);
+        listaduplamenteencadeada.adicionarAoFim(20);
+        listaduplamenteencadeada.adicionarAoFim(30);
 
-        // lista.adicionarAoInicio(28);
-        // lista.adicionarAoInicio(27);
-        // lista.adicionarAoInicio(24);
-        // lista.adicionarAoInicio(21);
-        // lista.adicionarAoInicio(32);
-        // lista.adicionarAoInicio(12);
-        // lista.adicionarAoInicio(2);
+        // Exibindo o número de nós na lista
+        System.out.println("Número de nós na lista: " + listaduplamenteencadeada.getTamanho());
 
-        // lista.mostrarNos();
+        // Inserindo após um valor informado
+        listaduplamenteencadeada.inserirApos(20, 25); // Inserindo 25 após 20
+        listaduplamenteencadeada.inserirApos(10, 15); // Inserindo 15 após 10
 
-        // System.out.println("-----");
+        // Exibindo a lista 
+        listaduplamenteencadeada.exibirLista();
 
-        // lista.remover(21);
-        // lista.mostrarNos();
+        // Testando a remoção
+        listaduplamenteencadeada.remover(20);
+        listaduplamenteencadeada.exibirLista();
+
+
     }
 }
