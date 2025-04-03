@@ -42,9 +42,16 @@ public class VetorApp {
 
         //adicionando itens a lista
         listaduplamenteencadeada.adicionarAoInicio(9);
-        listaduplamenteencadeada.adicionarAoInicio(10);
-        listaduplamenteencadeada.adicionarAoInicio(20);
-        listaduplamenteencadeada.adicionarAoInicio(30);
+        listaduplamenteencadeada.adicionarAoInicio(2);
+        listaduplamenteencadeada.adicionarAoInicio(7);
+        listaduplamenteencadeada.adicionarAoInicio(9);
+        listaduplamenteencadeada.adicionarAoInicio(12);
+        listaduplamenteencadeada.adicionarAoInicio(16);
+        listaduplamenteencadeada.adicionarAoInicio(21);
+        listaduplamenteencadeada.adicionarAoInicio(27);
+        listaduplamenteencadeada.adicionarAoInicio(33);
+        listaduplamenteencadeada.adicionarAoInicio(42);
+        listaduplamenteencadeada.adicionarAoInicio(54);
         
        
         System.out.println("Nós da lista:");
@@ -56,12 +63,12 @@ public class VetorApp {
         System.out.println("Número de nós na lista: " + listaduplamenteencadeada.contarNos());
 
         // Inserindo após um valor informado
-        listaduplamenteencadeada.inserirApos(20, 25); // Inserindo 25 após 20
-        listaduplamenteencadeada.inserirApos(10, 15); // Inserindo 15 após 10
+        listaduplamenteencadeada.inserirApos(21, 25); // Inserindo 25 após 20
+        listaduplamenteencadeada.inserirApos(9, 15); // Inserindo 15 após 10
         listaduplamenteencadeada.exibirLista();
 
         // Testando a remoção
-        listaduplamenteencadeada.remover(20);
+        listaduplamenteencadeada.remover(27);
         listaduplamenteencadeada.exibirLista();
         
         //Inserindo ao final da lista
@@ -75,8 +82,8 @@ public class VetorApp {
         System.out.println("Número de nós na lista: " + listaduplamenteencadeada.contarNos());
 
         //Inserindo ap´s um valor especifico
-        System.out.println("Inserindo 55 após o 10...");
-        listaduplamenteencadeada.inserirApos(10, 55);
+        System.out.println("Inserindo 12 após o 10...");
+        listaduplamenteencadeada.inserirApos(10, 12);
         listaduplamenteencadeada.mostrarNos();
         System.out.println("------");
 
@@ -90,7 +97,7 @@ public class VetorApp {
         System.out.println("Remove o nó após o atual:");
         it = listaduplamenteencadeada.getIterador();
         it.proximo(); // volta ao segundo nó
-        it.removerAposAtual(); // remove o 99
+        it.removerAposAtual(); 
         listaduplamenteencadeada.mostrarNos();
         System.out.println("------");
 
